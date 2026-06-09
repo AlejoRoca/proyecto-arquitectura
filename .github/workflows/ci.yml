@@ -26,3 +26,6 @@ jobs:
       - name: Verificar que Node puede leer server.js
         working-directory: api
         run: node --check server.js
+
+      - name: Construir imagen Docker de la API
+        run: docker build -t proyecto-arquitectura-api ./api
